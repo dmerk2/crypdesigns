@@ -1,0 +1,47 @@
+<h1 class="text-center">Register</h1>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <form method="post" action="/users/register">
+      {{!-- Name --}}
+      <div class="form-group">
+        <label for="nameInput">Name</label>
+        <input type="text" class="form-control" id="usernameInput" placeholder="Username" name="name">
+      </div>
+      {{!-- Username --}}
+      <div class="form-group">
+        <label for="usernameInput">Username</label>
+        <input type="text" class="form-control" id="usernameInput" placeholder="Username" name="username">
+      </div>
+      {{!--Email --}}
+      <div class="form-group">
+        <label for="emailInput">Email</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="Email" name="email">
+      </div>
+      {{!-- Password --}}
+      <div class="form-group">
+        <label for="passwordInput">Password</label>
+        <input type="password" class="form-control" id="passwordInput" placeholder="Password" name="password">
+      </div>
+      {{!-- Password Confirmation --}}
+      <div class="form-group">
+        <label for="passwordConfirm">Confirm Password</label>
+        <input type="password" class="form-control" id="passwordConfirm" placeholder="Password" name="password2">
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="userType" id="optionsRadios1" value="designer">
+          I'm a designer
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="userType" id="optionsRadios2" value="client">
+          I need a design
+        </label>
+      </div>
+      <button type="submit" class="btn btn-success">Register</button>
+    </form>
+    <span>Already have an account with us? <a href="/log-in">Log In!</a></span>
+  </div>
+</div>

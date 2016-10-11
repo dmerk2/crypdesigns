@@ -1,0 +1,40 @@
+.jumbotron {
+  height: 30em;
+}
+
+.client-jumbotron {
+  float: left;
+  width: 50%;
+  padding-right: 10%;
+  border-right: 1px black solid;
+}
+
+.designer-jumbotron {
+  float: right;
+  width: 50%;
+  padding-left: 10%;
+}
+
+#categoryList li {
+  font-size: 2em;
+  margin: .7em;
+}
+
+#categoryList li a:hover {
+  color: orange;
+}
+
+#subsList li a:hover {
+  color: orange;
+}
+
+#subsList li {
+  font-size: 1.5em;
+  margin: .7em;
+}
+
+
+.hide {
+  display: none;
+}
+

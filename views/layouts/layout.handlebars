@@ -1,0 +1,123 @@
+<html>
+<head>
+  <title>Crypdesigns</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Crypdesigns</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/categories/web-app-design">Web and App Design</a></li>
+              <li><a href="/categories/clothing-merch">Clothing and Merchandise</a></li>
+              <li><a href="/categories/art-illustration">Art and Illustration</a></li>
+              <li><a href="/categories/logos-identity">Logos and Identity</a></li>
+              <li><a href="/categories/business-advertising">Business and Advertising</a></li>
+              <li><a href="/categories/book-magazine">Book and Magazine</a></li>
+              <li><a href="/categories/packaging-label">Packaging and Label</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/categories">All</a></li>
+              <li><a href="/categories/other">Other</a></li>
+            </ul>
+          </li>
+          <li><a href="/how-it-works">How It Works <span class="sr-only">(current)</span></a></li>
+          <li><a href="/FAQ">FAQ</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/register">Register</a></li>
+          <li><a href="/users/login">Log In</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    {{{body}}}
+  </div>
+
+  <script type="text/javascript" src="/build/bundle.js"></script>
+  <script type="text/javascript">
+    var populateSubs = function(subcategory) {
+      $('#subsList').text('');
+      for (var i=0; i < subcategory.length; i++) {
+        $('#subsList').append(subcategory[i]);
+      }
+    };
+
+    var subcategories = {
+      web_app: ['<li><a href="/categories/web-design">Web page design</a></li>',
+        '<li><a href="/categories/wordpress-theme">WordPress theme design</a></li>',
+        '<li><a href="/categories/landing-page">Landing page design</a></li>',
+        '<li><a href="/categories/icon-button">Icon or button</a></li>',
+        '<li><a href="/categories/app-design">App design</a></li>',
+        '<li><a href="/categories/facebook-cover">Facebook cover</a></li>',
+        '<li><a href="/categories/social-media">Social media page</a></li>',
+        '<li><a href="/categories/banner-ad">Banner ad</a></li>',
+        '<li><a href="/categories/flash-banner">Flash banner</a></li>',
+        '<li><a href="/categories/other-web-app-design">Other web or app design</a></li>'],
+      clothing_merch: ['<li><a href="/categories/t-shirt">T-shirt</a></li>',
+        '<li><a href="/categories/clothing-apparel">Clothing or apparel</a></li>',
+        '<li><a href="/categories/merchandise">Merchandise</a></li>',
+        '<li><a href="/categories/cup-mug">Cup or mug</a></li>',
+        '<li><a href="/categories/sticker">Sticker</a></li>',
+        '<li><a href="/categories/other-clothing-merch">Other clothing or merchandise</a></li>'],
+      art_illustration: ['<li><a href="/categories/illustration-graphics">Illustration or graphics</a></li>',
+        '<li><a href="/categories/card-invitation">Card invitation</a></li>',
+        '<li><a href="/categories/character-mascot">Character or mascot</a></li>',
+        '<li><a href="/categories/tattoo">Tattoo</a></li>',
+        '<li><a href="/categories/3d">3D</a></li>',
+        '<li><a href="/categories/other-art-illustration">Other art or illustration</a></li>'],
+      logos_identity: ['<li><a href="/categories/logo-design">Logo design</a></li>',
+          '<li><a href="/categories/brand-identity-pack">Logo and brand identity pack</a></li>',
+          '<li><a href="/categories/social-media-pack">Logo and social media pack</a></li>',
+          '<li><a href="/categories/logo-website">Logo and hosted website pack</a></li>',
+          '<li><a href="/categories/logo-business-card">Logo and business card</a></li>',
+          '<li><a href="/categories/business-card">Business card</a></li>',
+          '<li><a href="/categories/stationery">Stationery</a></li>'],
+      business_advertising: ['<li><a href="/categories/postcard-flyer">Postcard, flyer or print</a></li>',
+          '<li><a href="/categories/poster">Poster</a></li>',
+          '<li><a href="/categories/infographic">Infographic</a></li>',
+          '<li><a href="/categories/brochure">Brochure</a></li>',
+          '<li><a href="/categories/vehicle-wrap">Car, truck or van wrap</a></li>',
+          '<li><a href="/categories/signage">Signage</a></li>',
+          '<li><a href="/categories/email">Email</a></li>',
+          '<li><a href="/categories/powerpoint-template">PowerPoint Template</a></li>',
+          '<li><a href="/categories/menu">Menu</a></li>',
+          '<li><a href="/categories/other-business-advertising">Other business or advertising</a></li>'],
+      book_magazine: ['<li><a href="/categories/book-cover">Book cover</a></li>',
+          '<li><a href="/categories/magazine-cover">Magazine cover</a></li>',
+          '<li><a href="/categories/other-book-magazine">Other book or magazine</a></li>'],
+      packaging_label: ['<li><a href="/categories/product-packaging">Product packaging</a></li>',
+          '<li><a href="/categories/product-label">Product label</a></li>',
+          '<li><a href="/categories/other-packaging-label">Other packaging or label</a></li>']
+    };
+
+      $('#categoryList > li a').hover(function() {
+        var id = this.id;
+        console.log(id);
+        $('#subsList').text('');
+        $('#subsList').append(subcategories[id]);
+      })
+  </script>
+
+</body>
+</html>
