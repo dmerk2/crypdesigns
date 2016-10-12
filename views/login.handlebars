@@ -1,20 +1,20 @@
-<h1 class="text-center">Sign In</h1>
+<h1 class="text-center">Log In</h1>
 
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-    <form>
+    <form method="post" action="/users/login">
       {{!-- Username or Email--}}
       <div class="form-group">
-        <label for="usernameOrEmail">Username or Email</label>
-        <input type="text" class="form-control" id="usernameOrEmail" placeholder="Username or Email">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" placeholder="Email" name="email">
       </div>
       {{!-- Password --}}
       <div class="form-group">
-        <label for="passwordInput">Password</label>
-        <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password">
       </div>
       <button type="submit" class="btn btn-success">Log In</button>
     </form>
-    <span>Don't have an account with us yet? <a href="/sign-up">Sign up!</a></span>
+    <span>Don't have an account with us yet? <a href="register">Sign up!</a></span>
   </div>
 </div>
