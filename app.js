@@ -11,7 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://heroku_k0gmfj43:254dpqr2cf134u7q3knm05sekl@ds015574.mlab.com:15574/heroku_k0gmfj43');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/crypdesigns');
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
@@ -69,10 +69,21 @@ app.use(flash());
 app.use(function (req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
-  res.locals.error = req.flash('error');
+  res.locals.error = req.flash('error'); 
   res.locals.user = req.user || null;
   next();
 });
+
+
+// Configure Cloudinary
+// app.configure('development', function(){
+//   app.use(express.errorHandler());
+//   cloudinary.config({ cloud_name: 'dmgjawsym', api_key: '846932236468652', api_secret: CLOUDINARY_SECRET_API });
+// });
+
+// app.locals.api_key = cloudinary.config().api_key;  
+// app.locals.cloud_name = cloudinary.config().cloud_name;  
+
 
 
 

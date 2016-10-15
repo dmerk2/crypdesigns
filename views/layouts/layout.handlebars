@@ -43,8 +43,12 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
+          {{#if user}}
+          <li><a href="/users/logout">Log Out</a></li>
+          {{else}}
           <li><a href="/users/register">Register</a></li>
           <li><a href="/users/login">Log In</a></li>
+          {{/if}}
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

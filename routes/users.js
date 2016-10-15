@@ -62,8 +62,8 @@ router.post('/register', function(req, res) {
 
 
 passport.use(new LocalStrategy(
-  function(email, password, done) {
-    User.getUserByEmail(email, function(err, user){
+  function(username, password, done) {
+    User.getUserByUsername(username, function(err, user){
       if(err) throw err;
       if(!user){
         return done(null, false, {message: 'Unknown User'});
@@ -99,7 +99,14 @@ router.post('/login',
 
 
 
+// Log Out User
+router.get('/logout', function(req, res) {
+  req.logout();
 
+  req.flash('success_msg', 'You are logged out');
+
+  res.redirect('/users/login');
+})
 
 
 
