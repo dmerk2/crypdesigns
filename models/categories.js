@@ -1,10 +1,10 @@
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 
-var User = require('../models/user');
+// var User = require('../models/user');
 
 
-// create the Schema class
-var Schema = mongoose.Schema;
+// // create the Schema class
+// var Schema = mongoose.Schema;
 
 // User Schema
 // var CategorySchema = new Schema({
@@ -41,11 +41,11 @@ var Schema = mongoose.Schema;
 // });
 
 
-var Category = mongoose.model('Category', CategorySchema);
+// var Category = mongoose.model('Category', CategorySchema);
 
-module.exports = Category;
+// module.exports = Category;
 
-module.exports.getCategoryByName = function(name, callback){
-  var query = {name: name};
-  Category.findOne(query, callback);
-};
+// module.exports.getCategoryByName = function(name, callback){
+//   var query = {name: name};
+//   Category.findOne(query, callback);
+// };
