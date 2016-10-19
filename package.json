@@ -23,7 +23,7 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
-    "mongodb": "*",
+    "mongodb": "2.2.10",
     "mongoose": "*",
     "morgan": "~1.7.0",
     "passport": "*",
