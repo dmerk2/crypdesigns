@@ -2,7 +2,15 @@
   "name": "crypdesigns",
   "version": "0.0.0",
   "private": true,
-  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "~6.6.0",
+    "npm": "3.10.7"
+  },  
   "dependencies": {
     "bcryptjs": "*",
     "body-parser": "~1.15.1",
