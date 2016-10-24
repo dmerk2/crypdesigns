@@ -10,7 +10,7 @@
   "engines": {
     "node": "~6.6.0",
     "npm": "3.10.7"
-  },  
+  },
   "dependencies": {
     "bcryptjs": "*",
     "body-parser": "~1.15.1",
@@ -23,7 +23,7 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
-    "mongodb": "2.2.10",
+    "mongodb": "^2.2.10",
     "mongoose": "*",
     "morgan": "~1.7.0",
     "passport": "*",

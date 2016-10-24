@@ -33,8 +33,35 @@
   margin: .7em;
 }
 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
 
 .hide {
   display: none;
 }
 
+.how-it-works {
+  background-color: orange;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.bitcoin-div {
+  background-color: black;
+  color: #5b687d;
+  padding: 1em;
+}
+
+.bitcoin-tabber {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.bitcoin-div h2, 
+.bitcoin-div h3, 
+.bitcoin-div a {
+  color: white;
+}
