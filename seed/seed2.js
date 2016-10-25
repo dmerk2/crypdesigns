@@ -1,28 +1,30 @@
-var Category = require('../models/categories.js');
-var Subcategory = require('../models/categories.js');
+var Category = require('../models/category.js');
+var Subcategory = require('../models/subcategory.js');
 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/crypdesigns');
 
-var web_app = new Category({
-  name: "Web and App Design"
-});
 
 web_app.save(function(err) {
-  if (err) return handleError(err);
+  if (err) return (err);
 
   var web_design = new Subcategory({name: "Web page design", category: web_app._id});
 
   web_design.save(function(err) {
-    if (err) return handleError(err);
+    if (err) return (err);
   })
+
+  web_app.subcategories.push(web_design);
+  web_app.save(function(err) {
+    if (err) return (err);
+  });
 })
 
 Category
 .findOne({ name: "Web and App Design" })
 .populate("subcategories")
 .exec(function (err, story) {
-  if (err) return handleError(err);
+  if (err) return (err);
   console.log("The subcategories are " + Category.subcategories);
   // prints "The creator is Aaron"
 });
