@@ -5,51 +5,51 @@ var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/crypdesigns');
 
 
-var web_design= new Subcategory({name: "Web page design", category: web_app})
-var wordpress_theme= new Subcategory({name: "WordPress theme design", category: web_app})
-var landing_page= new Subcategory({name: "Landing page design", category: web_app})
-var icon_button= new Subcategory({name: "Icon or button", category: web_app})
-var app_design= new Subcategory({name: "App design", category: web_app})
-var facebook_cover= new Subcategory({name: "Facebook cover", category: web_app})
-var social_media= new Subcategory({name: "Social media page", category: web_app})
-var banner_ad= new Subcategory({name: "Banner ad", category: web_app})
-var flash_banner= new Subcategory({name: "Flash banner", category: web_app})
-var other_web_app= new Subcategory({name: "Other web or app design", category: web_app})
-var tshirt= new Subcategory({name: "T-shirt", category: clothing_merch})
-var clothing_apparel= new Subcategory({name: "Clothing or apparel", category: clothing_merch})
-var merchandise= new Subcategory({name: "Merchandise", category: clothing_merch})
-var cup_mug= new Subcategory({name: "Cup or mug", category: clothing_merch})
-var sticker= new Subcategory({name: "Sticker", category: clothing_merch})
-var other_clothing_merch= new Subcategory({name: "Other clothing or merchandise", category: clothing_merch})
-var illustration_graphics= new Subcategory({name: "Illustration or graphics", category: art_illustration})
-var card_invitation= new Subcategory({name: "Card invitation", category: art_illustration})
-var character_mascot= new Subcategory({name: "Character or mascot", category: art_illustration})
-var tattoo= new Subcategory({name: "Tattoo", category: art_illustration})
-var three_dimensional= new Subcategory({name: "Three Dimensional", category: art_illustration})
-var other_art_illustration= new Subcategory({name: "Other art or illustration", category: art_illustration})
-var logo_design= new Subcategory({name: "Logo design", category: logos_identity})
-var brand_identity_pack= new Subcategory({name: "Logo and brand identity pack", category: logos_identity})
-var social_media_pack= new Subcategory({name: "Logo and social media pack", category: logos_identity})
-var logo_website= new Subcategory({name: "Logo and hosted website pack", category: logos_identity})
-var logo_business_card= new Subcategory({name: "Logo and business card", category: logos_identity})
-var business_card= new Subcategory({name: "Business card", category: logos_identity})
-var stationery= new Subcategory({name: "Stationery", category: logos_identity})
-var postcard_flyer= new Subcategory({name: "Postcard, flyer or print", category: business_advertising})
-var poster= new Subcategory({name: "Poster", category: business_advertising})
-var infographic= new Subcategory({name: "Infographic", category: business_advertising})
-var brochure= new Subcategory({name: "Brochure", category: business_advertising})
-var vehicle_wrap= new Subcategory({name: "Car, truck or van wrap", category: business_advertising})
-var signage= new Subcategory({name: "Signage", category: business_advertising})
-var email= new Subcategory({name: "Email", category: business_advertising})
-var powerpoint_template= new Subcategory({name: "PowerPoint Template", category: business_advertising})
-var menu= new Subcategory({name: "Menu", category: business_advertising})
-var other_business_advertising= new Subcategory({name: "Other business or advertising", category: business_advertising})
-var book_cover= new Subcategory({name: "Book cover", category: book_magazine})
-var magazine_cover= new Subcategory({name: "Magazine cover", category: book_magazine})
-var other_book_magazine= new Subcategory({name: "Other book or magazine", category: book_magazine})
-var product_packaging= new Subcategory({name: "Product packaging", category: packaging_label})
-var product_label= new Subcategory({name: "Product label", category: packaging_label})
-var other_packaging_label= new Subcategory({name: "Other packaging or label", category: packaging_label})
+var web_design= new Subcategory({name: "Web page design", category: web_app, link: 'web-design'})
+var wordpress_theme= new Subcategory({name: "WordPress theme design", category: web_app, link: 'wordpress-theme'})
+var landing_page= new Subcategory({name: "Landing page design", category: web_app, link: 'landing-page'})
+var icon_button= new Subcategory({name: "Icon or button", category: web_app, link: 'icon-button'})
+var app_design= new Subcategory({name: "App design", category: web_app, link: 'app-design'})
+var facebook_cover= new Subcategory({name: "Facebook cover", category: web_app, link: 'facebook-cover'})
+var social_media= new Subcategory({name: "Social media page", category: web_app, link: 'social-media'})
+var banner_ad= new Subcategory({name: "Banner ad", category: web_app, link: 'banner-ad'})
+var flash_banner= new Subcategory({name: "Flash banner", category: web_app, link: 'flash-banner'})
+var other_web_app= new Subcategory({name: "Other web or app design", category: web_app, link: 'other-web-app'})
+var tshirt= new Subcategory({name: "T-shirt", category: clothing_merch, link: 'tshirt'})
+var clothing_apparel= new Subcategory({name: "Clothing or apparel", category: clothing_merch, link: 'clothing-apparel'})
+var merchandise= new Subcategory({name: "Merchandise", category: clothing_merch, link: 'merchandise'})
+var cup_mug= new Subcategory({name: "Cup or mug", category: clothing_merch, link: 'cup-mug'})
+var sticker= new Subcategory({name: "Sticker", category: clothing_merch, link: 'sticker'})
+var other_clothing_merch= new Subcategory({name: "Other clothing or merchandise", category: clothing_merch, link: 'other-clothing-merch'})
+var illustration_graphics= new Subcategory({name: "Illustration or graphics", category: art_illustration, link: 'illustration-graphics'})
+var card_invitation= new Subcategory({name: "Card invitation", category: art_illustration, link: 'card-invitation'})
+var character_mascot= new Subcategory({name: "Character or mascot", category: art_illustration, link: 'character-mascot'})
+var tattoo= new Subcategory({name: "Tattoo", category: art_illustration, link: 'tattoo'})
+var three_dimensional= new Subcategory({name: "Three Dimensional", category: art_illustration, link: 'three-dimensional'})
+var other_art_illustration= new Subcategory({name: "Other art or illustration", category: art_illustration, link: 'other-art-illustration'})
+var logo_design= new Subcategory({name: "Logo design", category: logos_identity, link: 'logo-design'})
+var brand_identity_pack= new Subcategory({name: "Logo and brand identity pack", category: logos_identity, link: 'brand-identity-pack'})
+var social_media_pack= new Subcategory({name: "Logo and social media pack", category: logos_identity, link: 'social-media-pack'})
+var logo_website= new Subcategory({name: "Logo and hosted website pack", category: logos_identity, link: 'logo-website'})
+var logo_business_card= new Subcategory({name: "Logo and business card", category: logos_identity, link: 'logo-business-card'})
+var business_card= new Subcategory({name: "Business card", category: logos_identity, link: 'business-card'})
+var stationery= new Subcategory({name: "Stationery", category: logos_identity, link: 'stationery'})
+var postcard_flyer= new Subcategory({name: "Postcard, flyer or print", category: business_advertising, link: 'postcard-flyer'})
+var poster= new Subcategory({name: "Poster", category: business_advertising, link: 'poster'})
+var infographic= new Subcategory({name: "Infographic", category: business_advertising, link: 'infographic'})
+var brochure= new Subcategory({name: "Brochure", category: business_advertising, link: 'brochure'})
+var vehicle_wrap= new Subcategory({name: "Car, truck or van wrap", category: business_advertising, link: 'vehicle-wrap'})
+var signage= new Subcategory({name: "Signage", category: business_advertising, link: 'signage'})
+var email= new Subcategory({name: "Email", category: business_advertising, link: 'email'})
+var powerpoint_template= new Subcategory({name: "PowerPoint Template", category: business_advertising, link: 'powerpoint-template'})
+var menu= new Subcategory({name: "Menu", category: business_advertising, link: 'menu'})
+var other_business_advertising= new Subcategory({name: "Other business or advertising", category: business_advertising, link: 'other-business-advertising'})
+var book_cover= new Subcategory({name: "Book cover", category: book_magazine, link: 'book-cover'})
+var magazine_cover= new Subcategory({name: "Magazine cover", category: book_magazine, link: 'magazine-cover'})
+var other_book_magazine= new Subcategory({name: "Other book or magazine", category: book_magazine, link: 'other-book-magazine'})
+var product_packaging= new Subcategory({name: "Product packaging", category: packaging_label, link: 'product-packaging'})
+var product_label= new Subcategory({name: "Product label", category: packaging_label, link: 'product-label'})
+var other_packaging_label= new Subcategory({name: "Other packaging or label", category: packaging_label, link: 'other-packaging-label'})
 
 var Subcategories = [ web_design,
   wordpress_theme,
@@ -100,31 +100,38 @@ var Subcategories = [ web_design,
 
 var web_app = new Category({
   name: "Web and App Design",
-  subcategories: [web_design._id, wordpress_theme._id, landing_page._id, icon_button._id, app_design._id, facebook_cover._id, social_media._id, banner_ad._id, flash_banner._id, other_web_app._id]
+  subcategories: [web_design._id, wordpress_theme._id, landing_page._id, icon_button._id, app_design._id, facebook_cover._id, social_media._id, banner_ad._id, flash_banner._id, other_web_app._id],
+  link: 'web-app-design'
 });
 var clothing_merch = new Category({
   name: "Clothing and Merchandise",
-  subcategories: [tshirt._id, clothing_apparel._id, merchandise._id, cup_mug._id, sticker._id, other_clothing_merch._id]
+  subcategories: [tshirt._id, clothing_apparel._id, merchandise._id, cup_mug._id, sticker._id, other_clothing_merch._id],
+  link: 'clothing-merch'
 });
 var art_illustration = new Category({
   name: "Art and Illustration",
-  subcategories: [illustration_graphics._id, card_invitation._id, character_mascot._id, tattoo._id, three_dimensional._id, other_art_illustration._id ]
+  subcategories: [illustration_graphics._id, card_invitation._id, character_mascot._id, tattoo._id, three_dimensional._id, other_art_illustration._id ],
+  link: 'art-illustration'
 });
 var logos_identity = new Category({
   name: "Logos and Identity",
-  subcategories: [logo_design._id, brand_identity_pack._id, social_media_pack._id, logo_website._id, logo_business_card._id, business_card._id, stationery._id]
+  subcategories: [logo_design._id, brand_identity_pack._id, social_media_pack._id, logo_website._id, logo_business_card._id, business_card._id, stationery._id],
+  link: 'logos-identity'
 });
 var business_advertising = new Category({
   name: "Business and Advertising",
-  subcategories: [postcard_flyer._id, poster._id, infographic._id, brochure._id, vehicle_wrap._id, signage._id, email._id, powerpoint_template._id, menu._id, other_business_advertising._id]
+  subcategories: [postcard_flyer._id, poster._id, infographic._id, brochure._id, vehicle_wrap._id, signage._id, email._id, powerpoint_template._id, menu._id, other_business_advertising._id],
+  link: 'business-advertising'
 });
 var book_magazine = new Category({
   name: "Book and Magazine",
-  subcategories: [book_cover._id, magazine_cover._id, other_book_magazine._id]
+  subcategories: [book_cover._id, magazine_cover._id, other_book_magazine._id],
+  link: 'book-magazine'
 });
 var packaging_label = new Category({
   name: "Packaging and Label",
-  subcategories: [product_packaging._id, product_label._id, other_packaging_label._id]
+  subcategories: [product_packaging._id, product_label._id, other_packaging_label._id],
+  link: 'packaging-label'
 });
 
 var Categories = [web_app, clothing_merch, art_illustration, logos_identity, business_advertising, book_magazine, packaging_label];

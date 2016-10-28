@@ -2,58 +2,124 @@
 <br>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <form>
+    <form method="post" action="/request-design">
+      <div class="form-group">
+        <h4>Please select a category</h4>
+        <select class="form-control" name="category">
+        {{!-- Web and app design --}}
+          <option value="web-app-design">Web and App Design</option>
+          <option value="web-design">--Web page design</option>
+          <option value="wordpress-theme">--WordPress theme design</option>
+          <option value="landing-page">--Landing page design</option>
+          <option value="icon-button">--Icon or button</option>
+          <option value="app-design">--App design</option>
+          <option value="facebook-cover">--Facebook cover</option>
+          <option value="social-media">--Social media page</option>
+          <option value="banner-ad">--Banner ad</option>
+          <option value="flash-banner">--Flash banner</option>
+          <option value="other-web-app">--Other web or app design</option>
+        {{!-- Clothing and merchandise --}}
+          <option value="clothing-merch">Clothing and Merchandise</option>
+          <option value="tshirt">--T-shirt</option>
+          <option value="clothing-apparel">--Clothing or apparel</option>
+          <option value="merchandise">--Merchandise</option>
+          <option value="cup-mug">--Cup or mug</option>
+          <option value="sticker">--Sticker</option>
+          <option value="other-clothing-merch">--Other clothing or merchandise</option>
+        {{!-- Art and illustration --}}
+          <option value="art-illustration">Art and Illustration</option>
+          <option value="illustration-graphics">--Illustration or graphics</option>
+          <option value="card-invitation">--Card invitation</option>
+          <option value="character-mascot">--Character or mascot</option>
+          <option value="tattoo">--Tattoo</option>
+          <option value="three-dimensional">3D">--3D</option>
+          <option value="other-art-illustration">--Other art or illustration</option>
+        {{!-- Logos and identity --}}
+          <option value="logos-identity">Logos and Identity</option>
+          <option value="logo-design">--Logo design</option>
+          <option value="brand-identity-pack">--Logo and brand identity pack</option>
+          <option value="social-media-pack">--Logo and social media pack</option>
+          <option value="logo-website">--Logo and hosted website pack</option>
+          <option value="logo-business-card">--Logo and business card</option>
+          <option value="business-card">--Business card</option>
+          <option value="stationery">--Stationery</option>
+        {{!-- Business and advertising --}}
+          <option value="business-advertising">Business and Advertising</option>
+          <option value="postcard-flyer">--Postcard, flyer or print</option>
+          <option value="poster">--Poster</option>
+          <option value="infographic">--Infographic</option>
+          <option value="brochure">--Brochure</option>
+          <option value="vehicle-wrap">--Car, truck or van wrap</option>
+          <option value="signage">--Signage</option>
+          <option value="email">--Email</option>
+          <option value="powerpoint-template">--PowerPoint Template</option>
+          <option value="menu">--Menu</option>
+          <option value="other-business-advertising">--Other business or advertising</option>
+        {{!-- Book and magazine --}}
+          <option value="book-magazine">Book or Magazine</option>
+          <option value="book-cover">--Book cover</option>
+          <option value="magazine-cover">--Magazine cover</option>
+          <option value="other-book-magazine">--Other book or magazine</option>
+        {{!-- Packaging and label --}}
+          <option value="packaging-label">Packaging and Label</option>
+          <option value="product-packaging">--Product packaging</option>
+          <option value="product-label">--Product label</option>
+          <option value="other-packaging-label">--Other packaging or label</option>
+        {{!-- Other --}}
+          <option value="other">Other</option>
+        </select>
+      </div>
       <div class="form-group">
         <h4>What would you like to name your contest?</h4>
-        <input type="text" class="form-control" id="contestName" placeholder="Bulletproof Coffee">
+        <input type="text" class="form-control" id="contestName" placeholder="Bulletproof Coffee needs a new logo!" name="contest">
       </div>
       <div class="form-group">
         <h4>What is the name you'd like in your design?</h4>
-        <input type="text" class="form-control" id="companyName" placeholder="Bulletproof Coffee">
+        <input type="text" class="form-control" id="companyName" placeholder="Bulletproof Coffee" name="company">
       </div>
       <div class="form-group">
         <h4>Is there a slogan you would like to be used in the design?</h4>
-        <input type="text" class="form-control" id="slogan" placeholder="Coffee for mission critical performance">
+        <input type="text" class="form-control" id="slogan" placeholder="Coffee for mission critical performance" name="slogan">
       </div>
       <div class="form-group">
         <h4>Tell us about your target audience.</h4>
-        <input type="text" class="form-control" id="audience" placeholder="Health-conscious, paleo startup execs who blog about their 'morning routine'">
+        <input type="text" class="form-control" id="audience" placeholder="Health-conscious, paleo startup execs who blog about their 'morning routine'" name="audience">
       </div>
       <div class="form-group">
         <h4>What industry are you in?</h4>
-        <input type="text" class="form-control" id="industry" placeholder="Health/nutrition and Coffee">
+        <input type="text" class="form-control" id="industry" placeholder="Health/nutrition and Coffee" name="industry">
       </div>
       <div class="form-group">
         <h4>What colors should be used in your design?</h4>
-        <input type="text" class="form-control" id="colors" placeholder="Black, white and orange">
+        <input type="text" class="form-control" id="colors" placeholder="Black, white and orange" name="colors">
       </div>
       <br>
       <h4>Tell us more about your brand's style:</h4>
       <br>
       <label for="classicModern">Classic</label>
       <label for="classicModern" style="float: right">Modern</label>
-      <input id="classicModern" type="range" min="0" max="50" value="25" step="5" />
+      <input id="classicModern" type="range" min="0" max="50" value="25" step="5" name="classicModern"/>
 
 
       <label for="matureYouthful">Mature</label>
       <label for="matureYouthful" style="float: right">Youthful</label>
-      <input id="matureYouthful" type="range" min="0" max="50" value="25" step="5" />
+      <input id="matureYouthful" type="range" min="0" max="50" value="25" step="5" name="matureYouthful" />
 
       <label for="feminineMasculine">Feminine</label>
       <label for="feminineMasculine" style="float: right">Masculine</label>
-      <input id="feminineMasculine" type="range" min="0" max="50" value="25" step="5" />
+      <input id="feminineMasculine" type="range" min="0" max="50" value="25" step="5" name="feminineMasculine"/>
 
       <label for="playfulSophisticated">Playful</label>
       <label for="playfulSophisticated" style="float: right">Sophisticated</label>
-      <input id="playfulSophisticated" type="range" min="0" max="50" value="25" step="5" />
+      <input id="playfulSophisticated" type="range" min="0" max="50" value="25" step="5" name="playfulSophisticated" />
 
       <label for="economicalLuxurious">Economical</label>
       <label for="economicalLuxurious" style="float: right">Luxurious</label>
-      <input id="economicalLuxurious" type="range" min="0" max="50" value="25" step="5" />
+      <input id="economicalLuxurious" type="range" min="0" max="50" value="25" step="5" name="economicalLuxurious"/>
 
       <label for="geometricOrganic">Geometric</label>
       <label for="geometricOrganic" style="float: right">Organic</label>
-      <input id="geometricOrganic" type="range" min="0" max="50" value="25" step="5" />
+      <input id="geometricOrganic" type="range" min="0" max="50" value="25" step="5" name="geometricOrganic"/>
 
       <br>
       <h4>Please upload some designs you like for our artists to draw inspiration from:</h4>
@@ -88,7 +154,7 @@
           <textarea id = "myTextArea" rows = "3" cols = "80"></textarea>
         </p>
 
-        <button class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success">Submit</button>
     </form>
   </div>
 </div>

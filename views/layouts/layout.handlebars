@@ -2,8 +2,9 @@
 <head>
   <title>Crypdesigns</title>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  {{!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> --}}
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+  {{!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
   <link rel="stylesheet" type="text/css" href="/stylesheets/carousel.css">
   <link rel="stylesheet" type="text/css" href="/stylesheets/how-it-works.css">
@@ -81,51 +82,51 @@
     };
 
     var subcategories = {
-      web_app: ['<li><a href="/categories/web-design">Web page design</a></li>',
-        '<li><a href="/categories/wordpress-theme">WordPress theme design</a></li>',
-        '<li><a href="/categories/landing-page">Landing page design</a></li>',
-        '<li><a href="/categories/icon-button">Icon or button</a></li>',
-        '<li><a href="/categories/app-design">App design</a></li>',
-        '<li><a href="/categories/facebook-cover">Facebook cover</a></li>',
-        '<li><a href="/categories/social-media">Social media page</a></li>',
-        '<li><a href="/categories/banner-ad">Banner ad</a></li>',
-        '<li><a href="/categories/flash-banner">Flash banner</a></li>',
-        '<li><a href="/categories/other-web-app">Other web or app design</a></li>'],
-      clothing_merch: ['<li><a href="/categories/t-shirt">T-shirt</a></li>',
-        '<li><a href="/categories/clothing-apparel">Clothing or apparel</a></li>',
-        '<li><a href="/categories/merchandise">Merchandise</a></li>',
-        '<li><a href="/categories/cup-mug">Cup or mug</a></li>',
-        '<li><a href="/categories/sticker">Sticker</a></li>',
-        '<li><a href="/categories/other-clothing-merch">Other clothing or merchandise</a></li>'],
-      art_illustration: ['<li><a href="/categories/illustration-graphics">Illustration or graphics</a></li>',
-        '<li><a href="/categories/card-invitation">Card invitation</a></li>',
-        '<li><a href="/categories/character-mascot">Character or mascot</a></li>',
-        '<li><a href="/categories/tattoo">Tattoo</a></li>',
-        '<li><a href="/categories/three-dimensional">3D</a></li>',
-        '<li><a href="/categories/other-art-illustration">Other art or illustration</a></li>'],
-      logos_identity: ['<li><a href="/categories/logo-design">Logo design</a></li>',
-          '<li><a href="/categories/brand-identity-pack">Logo and brand identity pack</a></li>',
-          '<li><a href="/categories/social-media-pack">Logo and social media pack</a></li>',
-          '<li><a href="/categories/logo-website">Logo and hosted website pack</a></li>',
-          '<li><a href="/categories/logo-business-card">Logo and business card</a></li>',
-          '<li><a href="/categories/business-card">Business card</a></li>',
-          '<li><a href="/categories/stationery">Stationery</a></li>'],
-      business_advertising: ['<li><a href="/categories/postcard-flyer">Postcard, flyer or print</a></li>',
-          '<li><a href="/categories/poster">Poster</a></li>',
-          '<li><a href="/categories/infographic">Infographic</a></li>',
-          '<li><a href="/categories/brochure">Brochure</a></li>',
-          '<li><a href="/categories/vehicle-wrap">Car, truck or van wrap</a></li>',
-          '<li><a href="/categories/signage">Signage</a></li>',
-          '<li><a href="/categories/email">Email</a></li>',
-          '<li><a href="/categories/powerpoint-template">PowerPoint Template</a></li>',
-          '<li><a href="/categories/menu">Menu</a></li>',
-          '<li><a href="/categories/other-business-advertising">Other business or advertising</a></li>'],
-      book_magazine: ['<li><a href="/categories/book-cover">Book cover</a></li>',
-          '<li><a href="/categories/magazine-cover">Magazine cover</a></li>',
-          '<li><a href="/categories/other-book-magazine">Other book or magazine</a></li>'],
-      packaging_label: ['<li><a href="/categories/product-packaging">Product packaging</a></li>',
-          '<li><a href="/categories/product-label">Product label</a></li>',
-          '<li><a href="/categories/other-packaging-label">Other packaging or label</a></li>']
+      web_app: ['<li><a href="/categories/web-app-design/web-design">Web page design</a></li>',
+        '<li><a href="/categories/web-app-design/wordpress-theme">WordPress theme design</a></li>',
+        '<li><a href="/categories/web-app-design/landing-page">Landing page design</a></li>',
+        '<li><a href="/categories/web-app-design/icon-button">Icon or button</a></li>',
+        '<li><a href="/categories/web-app-design/app-design">App design</a></li>',
+        '<li><a href="/categories/web-app-design/facebook-cover">Facebook cover</a></li>',
+        '<li><a href="/categories/web-app-design/social-media">Social media page</a></li>',
+        '<li><a href="/categories/web-app-design/banner-ad">Banner ad</a></li>',
+        '<li><a href="/categories/web-app-design/flash-banner">Flash banner</a></li>',
+        '<li><a href="/categories/web-app-design/other-web-app">Other web or app design</a></li>'],
+      clothing_merch: ['<li><a href="/categories/clothing-merch/t-shirt">T-shirt</a></li>',
+        '<li><a href="/categories/clothing-merch/clothing-apparel">Clothing or apparel</a></li>',
+        '<li><a href="/categories/clothing-merch/merchandise">Merchandise</a></li>',
+        '<li><a href="/categories/clothing-merch/cup-mug">Cup or mug</a></li>',
+        '<li><a href="/categories/clothing-merch/sticker">Sticker</a></li>',
+        '<li><a href="/categories/clothing-merch/other-clothing-merch">Other clothing or merchandise</a></li>'],
+      art_illustration: ['<li><a href="/categories/art-illustration/illustration-graphics">Illustration or graphics</a></li>',
+        '<li><a href="/categories/art-illustration/card-invitation">Card invitation</a></li>',
+        '<li><a href="/categories/art-illustration/character-mascot">Character or mascot</a></li>',
+        '<li><a href="/categories/art-illustration/tattoo">Tattoo</a></li>',
+        '<li><a href="/categories/art-illustration/three-dimensional">3D</a></li>',
+        '<li><a href="/categories/art-illustration/other-art-illustration">Other art or illustration</a></li>'],
+      logos_identity: ['<li><a href="/categories/art-illustration/logo-design">Logo design</a></li>',
+          '<li><a href="/categories/art-illustration/brand-identity-pack">Logo and brand identity pack</a></li>',
+          '<li><a href="/categories/art-illustration/social-media-pack">Logo and social media pack</a></li>',
+          '<li><a href="/categories/art-illustration/logo-website">Logo and hosted website pack</a></li>',
+          '<li><a href="/categories/art-illustration/logo-business-card">Logo and business card</a></li>',
+          '<li><a href="/categories/art-illustration/business-card">Business card</a></li>',
+          '<li><a href="/categories/art-illustration/stationery">Stationery</a></li>'],
+      business_advertising: ['<li><a href="/categories/business-advertising/postcard-flyer">Postcard, flyer or print</a></li>',
+          '<li><a href="/categories/business-advertising/poster">Poster</a></li>',
+          '<li><a href="/categories/business-advertising/infographic">Infographic</a></li>',
+          '<li><a href="/categories/business-advertising/brochure">Brochure</a></li>',
+          '<li><a href="/categories/business-advertising/vehicle-wrap">Car, truck or van wrap</a></li>',
+          '<li><a href="/categories/business-advertising/signage">Signage</a></li>',
+          '<li><a href="/categories/business-advertising/email">Email</a></li>',
+          '<li><a href="/categories/business-advertising/powerpoint-template">PowerPoint Template</a></li>',
+          '<li><a href="/categories/business-advertising/menu">Menu</a></li>',
+          '<li><a href="/categories/business-advertising/other-business-advertising">Other business or advertising</a></li>'],
+      book_magazine: ['<li><a href="/categories/book-magazine/book-cover">Book cover</a></li>',
+          '<li><a href="/categories/book-magazine/magazine-cover">Magazine cover</a></li>',
+          '<li><a href="/categories/book-magazine/other-book-magazine">Other book or magazine</a></li>'],
+      packaging_label: ['<li><a href="/categories/packaging-label/product-packaging">Product packaging</a></li>',
+          '<li><a href="/categories/packaging-label/product-label">Product label</a></li>',
+          '<li><a href="/categories/packaging-label/other-packaging-label">Other packaging or label</a></li>']
     };
 
       $('#categoryList > li a').hover(function() {
