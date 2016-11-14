@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var cloudinary = require('cloudinary');
 
 var Category = require('../models/category.js');
 var Subcategory = require('../models/subcategory.js');
@@ -36,19 +37,32 @@ router.get('/categories', function(req, res, next) {
 });
 
 router.get('/categories/:category', function(req, res) {
-  Category.findOne({link: req.params.category}).exec(function(err, category) {
-    res.render('category', {'category': category});
+  Category.findOne({link: req.params.category}).exec(function(err, cat) {
+    Contest.find({category: cat.link}).exec(function(err, contest) {
+      res.render('category', {'category': cat, 'contest': contest});
+    })
   })
 });
 
 router.get('/categories/:category/:subcategory', function(req, res) {
-  Subcategory.findOne({link: req.params.subcategory}).exec(function(err, subcategory) {
-    res.render('subcategory', {'subcategory': subcategory});
+  Subcategory.findOne({link: req.params.subcategory}).exec(function(err, subcat) {
+    Contest.find({category: subcat.link}).exec(function(err, contest) {
+      res.render('subcategory', {'subcategory': subcat, 'contest': contest});
+    })
+  })
+});
+
+router.get('/contests/:category/:id', function(req, res) {
+  var id = 'ObjectId(' + '"' + req.params.id + '"' + ')';
+  Contest.exec(function(err, contest) {
+    res.render('contest', {contest: contest, id: id});
   })
 });
 
 router.post('/request-design', function(req, res) {
+  var creator = req.user.username;
   var category = req.body.category;
+  var description = req.body.description;
   var contest = req.body.contest;
   var company = req.body.company;
   var slogan = req.body.slogan;
@@ -65,6 +79,7 @@ router.post('/request-design', function(req, res) {
 
   // Validation
   req.checkBody('category', 'Category is required').notEmpty();
+  req.checkBody('description', 'Description is required').notEmpty();
   req.checkBody('contest', 'Contest name is required').notEmpty();
   req.checkBody('company', 'Company name is required').notEmpty();
   req.checkBody('slogan', 'Slogan is required').notEmpty();
@@ -80,7 +95,9 @@ router.post('/request-design', function(req, res) {
     });
   } else {
     var newContest = new Contest({
+      creator: creator,
       category: category,
+      description: description,
       contest: contest,
       company: company,
       slogan: slogan,
@@ -102,11 +119,28 @@ router.post('/request-design', function(req, res) {
     });
 
     // THIS CODE SHOULD EVENTUALLY BE MADE SO CATEGORIES ARE ADDED AUTOMATICALLY!
-    if (category === "web-app-design" || category === "clothing-merch" || category === "art-illustration" || category === "logos-identity" || )
+    if (category === "web-app-design" || category === "clothing-merch" || category === "art-illustration" || category === "logos-identity" || category === "business-advertising" || category === "book-magazine" || category === "packaging-label") {
+      Category.findOne({link: category}).exec(function(err, category) {
+        category.contests.push(newContest._id);
+        category.save(function(err) {
+          if (err) throw err;
+          else category.populate('contests');
+        });
+      })
+    }
+    else {
+      Subcategory.findOne({link: category}).exec(function(err, category) {
+        category.contests.push(newContest._id);
+        category.save(function(err) {
+          if (err) throw err;
+          else category.populate('contests');
+        })
+      })
+    }
 
-    req.flash('success_msg', 'Congratulations on your new contest!!');
+  req.flash('success_msg', 'Congratulations on your new contest!!');
 
-    res.redirect('/categories');
+  res.redirect('/categories');
   };
 });
 

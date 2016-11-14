@@ -2,7 +2,7 @@
 <br>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <form method="post" action="/request-design">
+    <form method="post" action="/request-design" id="request-form">
       <div class="form-group">
         <h4>Please select a category</h4>
         <select class="form-control" name="category">
@@ -69,9 +69,61 @@
           <option value="other">Other</option>
         </select>
       </div>
+      {{!-- Industry --}}
+      <div class="form-group">
+        <h4>What industry are you in?</h4>
+        <select class="form-control" name="industry">
+          <option value="Accounting & Financial">Accounting & Financial</option>
+          <option value="Agriculture">Agriculture</option>
+          <option value="Animal & Pet">Animal & Pet</option>
+          <option value="Architectural">Architectural</option>
+          <option value="Art & Design">Art & Design</option>
+          <option value="Attorney & Law">Attorney & Law</option>
+          <option value="Automotive">Automotive</option>
+          <option value="Bar & Nightclub">Bar & Nightclub</option>
+          <option value="Business & Consulting">Business & Consulting</option>
+          <option value="Childcare">Childcare</option>
+          <option value="Cleaning & Maintenance">Cleaning & Maintenance</option>
+          <option value="Communications">Communications</option>
+          <option value="Community & Non-Profit">Community & Non-Profit</option>
+          <option value="Computer">Computer</option>
+          <option value="Construction">Construction</option>
+          <option value="Cosmetics & Beauty">Cosmetics & Beauty</option>
+          <option value="Dating">Dating</option>
+          <option value="Education">Education</option>
+          <option value="Entertainment & The Arts">Entertainment & The Arts</option>
+          <option value="Environmental">Environmental</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Floral">Floral</option>
+          <option value="Food & Drink">Food & Drink</option>
+          <option value="Games & Recreational">Games & Recreational</option>
+          <option value="Home Furnishing">Home Furnishing</option>
+          <option value="Industrial">Industrial</option>
+          <option value="Internet">Internet</option>
+          <option value="Landscaping">Landscaping</option>
+          <option value="Medical & Pharmaceutical">Medical & Pharmaceutical</option>
+          <option value="Photography">Photography</option>
+          <option value="Physical Fitness">Physical Fitness</option>
+          <option value="Political">Political</option>
+          <option value="Real Estate & Mortgage">Real Estate & Mortgage</option>
+          <option value="Religious">Religious</option>
+          <option value="Restaurant">Restaurant</option>
+          <option value="Retail">Retail</option>
+          <option value="Security">Security</option>
+          <option>Spa & Esthetics</option>
+          <option value="Sport">Sport</option>
+          <option value="Technology">Technology</option>
+          <option value="Travel & Hotel">Travel & Hotel</option>
+          <option value="Wedding Service">Wedding Service</option>
+        </select>
+      </div>
       <div class="form-group">
         <h4>What would you like to name your contest?</h4>
         <input type="text" class="form-control" id="contestName" placeholder="Bulletproof Coffee needs a new logo!" name="contest">
+      </div>
+      <div class="form-group">
+        <h4>Please give a description of your contest.</h4>
+        <textarea class="form-control" id="description" placeholder="We are looking to revamp our logo and appeal better to our primary demographic." name="description"></textarea>
       </div>
       <div class="form-group">
         <h4>What is the name you'd like in your design?</h4>
@@ -84,10 +136,6 @@
       <div class="form-group">
         <h4>Tell us about your target audience.</h4>
         <input type="text" class="form-control" id="audience" placeholder="Health-conscious, paleo startup execs who blog about their 'morning routine'" name="audience">
-      </div>
-      <div class="form-group">
-        <h4>What industry are you in?</h4>
-        <input type="text" class="form-control" id="industry" placeholder="Health/nutrition and Coffee" name="industry">
       </div>
       <div class="form-group">
         <h4>What colors should be used in your design?</h4>
@@ -119,39 +167,18 @@
 
       <label for="geometricOrganic">Geometric</label>
       <label for="geometricOrganic" style="float: right">Organic</label>
-      <input id="geometricOrganic" type="range" min="0" max="50" value="25" step="5" name="geometricOrganic"/>
-
-      <br>
-      <h4>Please upload some designs you like for our artists to draw inspiration from:</h4>
-      <br>
+      
+      
       <div class="form-group">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Check me out
-        </label>
+      <h4>Upload sketches or similar logos to help designers know what to create.</h4>
+         <input type="hidden" id="coaturl" name="coaturl"/>
+         <div class="coatimage"></div>
+         <input id="upload-img" type="file" name="file">
       </div>
 
-      <br>
-      <h4>Please upload any helpful images or sketches:</h4>
-      <br>
-      <div class="form-group">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Check me out
-        </label>
-      </div>
-
-       <p>
+      <p>
           <h4>Any other information you'd like our designers to have?</h4>
-          <textarea id = "myTextArea" rows = "3" cols = "80"></textarea>
+          <textarea id="info" rows = "3" cols = "80" name="info"></textarea>
         </p>
 
         <button type="submit" class="btn btn-success">Submit</button>

@@ -1,21 +1,20 @@
 <div class="page-header">
-  <h1 class="text-center">{{category.name}}</h1>
+  <h1 class="text-center">{{contest.contest}}</h1>
   <div class="container">
-    {{#each contest}}
     <div class="row">
       <div class="col-md-3">
         {{!-- img --}}
-        <img src="http://res.cloudinary.com/dmgjawsym/image/upload/w_150,h_100,c_fill/sample.jpg" alt="pic goes here">
+        <img src="#" alt="pic goes here">
       </div>
 
+      id: {{id}}
+
       <div class="col-md-9">
-        <h3>{{contest}}</h3>
         <p>{{description}}</p>
         <p style="font-style: italic">By {{creator}}</p>
         <span style="border: 1px black solid; padding: 5px">{{industry}}</span>
       </div>
     </div>
     <br>
-    {{/each}}
   </div>
 </div>

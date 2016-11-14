@@ -5,6 +5,7 @@ var Schema = mongoose.Schema;
 
 var ContestSchema = new Schema({
   creator: String,
+  description: String,
   category: String,
   contest: String,
   company: String,

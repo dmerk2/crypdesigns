@@ -10,6 +10,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
+var cloudinary = require('cloudinary');
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/crypdesigns');
 var db = mongoose.connection;
@@ -17,8 +18,12 @@ var db = mongoose.connection;
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+
 // Init App
 var app = express();
+
+// app.locals.api_key = cloudinary.config().api_key;
+// app.locals.cloud_name = cloudinary.config().cloud_name;
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
@@ -73,17 +78,6 @@ app.use(function (req, res, next) {
   res.locals.user = req.user || null;
   next();
 });
-
-
-// Configure Cloudinary
-// app.configure('development', function(){
-//   app.use(express.errorHandler());
-//   cloudinary.config({ cloud_name: 'dmgjawsym', api_key: '846932236468652', api_secret: CLOUDINARY_SECRET_API });
-// });
-
-// app.locals.api_key = cloudinary.config().api_key;  
-// app.locals.cloud_name = cloudinary.config().cloud_name;  
-
 
 
 
