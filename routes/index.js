@@ -38,6 +38,7 @@ router.get('/categories', function(req, res, next) {
 
 router.get('/categories/:category', function(req, res) {
   Category.findOne({link: req.params.category}).exec(function(err, cat) {
+    console.log(cat.link);
     Contest.find({category: cat.link}).exec(function(err, contest) {
       res.render('category', {'category': cat, 'contest': contest});
     })
@@ -75,6 +76,7 @@ router.post('/request-design', function(req, res) {
   var playfulSophisticated = req.body.playfulSophisticated;
   var economicalLuxurious = req.body.economicalLuxurious;
   var geometricOrganic = req.body.geometricOrganic;
+  var sketchId = req.body.sketchId;
   var info = req.body.info;
 
   // Validation
@@ -110,6 +112,7 @@ router.post('/request-design', function(req, res) {
       playfulSophisticated: playfulSophisticated,
       economicalLuxurious: economicalLuxurious,
       geometricOrganic: geometricOrganic,
+      sketchId: sketchId,
       info: info
     });
 

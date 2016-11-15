@@ -20,6 +20,7 @@ var ContestSchema = new Schema({
   economicalLuxurious: String,
   geometricOrganic: String,
   info: String,
+  sketchId: String,
   designs: [{type: mongoose.Schema.Types.ObjectId, ref: 'Design'}]
 });
 

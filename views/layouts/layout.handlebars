@@ -139,9 +139,22 @@
     $('#subsList').append(subcategories[id]);
   });
 
+  // Upload image to cloudinary
+
+  // Configure Cloudinary
+  $.cloudinary.config({ cloud_name: 'dmgjawsym', api_key: '846932236468652'})
+
   $('#request-form').unsigned_cloudinary_upload('n2opekbe', 
     { cloud_name: 'dmgjawsym', tags: 'browser_uploads' }, 
-    { multiple: true });
+    { multiple: true })
+    .bind('cloudinarydone', function(e, data) {
+      console.log('THIS IS CLOUDINARY DATA ', data);
+      var sketchId = data.result.public_id;
+      console.log(sketchId);
+      console.log('original val: ' + document.getElementById('sketchId').value);
+      document.getElementById('sketchId').value = sketchId;
+      console.log('new val: ' + document.getElementById('sketchId').value);
+    });
   </script>
 
 </body>
