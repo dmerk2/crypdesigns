@@ -1,20 +1,63 @@
 <div class="page-header">
-  <h1 class="text-center">{{contest.contest}}</h1>
   <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        {{!-- img --}}
-        <img src="#" alt="pic goes here">
-      </div>
-
-      id: {{id}}
-
-      <div class="col-md-9">
-        <p>{{description}}</p>
-        <p style="font-style: italic">By {{creator}}</p>
-        <span style="border: 1px black solid; padding: 5px">{{industry}}</span>
-      </div>
+    <div class="row text-center jumbotron" style="height: 44%">
+      <h3>{{contest.contest}}<h3>
+      <h5>By {{contest.creator}}</h5>
+      <h3>{{contest.btcPrize}} bits</h3>
+      <br>
+      <button class="btn btn-success">Submit design</button>
     </div>
-    <br>
+    <hr/>
+    
+        <div class="text-center">
+          <h3>Background Info</h3>
+          <h4>Category</h4>
+          <p>{{contest.category}}</p>
+          <h4>Company Name</h4>
+          <p>{{contest.company}}</p>
+          <h4>Description</h4>
+          <p>{{contest.description}}</p>
+          <h4>Category</h4>
+          <p>{{contest.category}}</p>
+          <h4>Slogan</h4>
+          <p>{{contest.slogan}}</p>
+          <h4>Target Audience</h4>
+          <p>{{contest.audience}}</p>
+          <h4>Colors</h4>
+          <p>{{contest.colors}}</p>
+          <h4>Additional Info</h4>
+          <p>{{contest.info}}</p>
+          <hr/>
+          <br>
+
+          <h3>Style Attributes</h3>
+        <ul class="bargraph" style="margin: 0 auto">
+          <label for="classicModern">Classic</label>
+          <label for="classicModern" style="float: right">Modern</label>
+          <li class="classicModern reddeep" style="width: {{contest.classicModern}}%"></li>
+
+          <label for="matureYouthful">Mature</label>
+          <label for="matureYouthful" style="float: right">Youthful</label>
+          <li class="matureYouthful" style="width: {{contest.matureYouthful}}%"></li>
+
+          <label for="feminineMasculine">Feminine</label>
+          <label for="feminineMasculine" style="float: right">Masculine</label>
+          <li class="feminineMasculine" style="width: {{contest.feminineMasculine}}%"></li>
+
+          <label for="playfulSophisticated">Playful</label>
+          <label for="playfulSophisticated" style="float: right">Sophisticated</label>
+          <li class="playfulSophisticated" style="width: {{contest.playfulSophisticated}}%"></li>
+
+          <label for="economicalLuxurious">Economical</label>
+          <label for="economicalLuxurious" style="float: right">Luxurious</label>
+          <li class="economicalLuxurious" style="width: {{contest.economicalLuxurious}}%"></li>
+
+          <label for="geometricOrganic">Geometric</label>
+          <label for="geometricOrganic" style="float: right">Organic</label>
+          <li class="geometricOrganic" style="width: {{contest.geometricOrganic}}%"></li>
+        </ul>
   </div>
+    
 </div>
+
+

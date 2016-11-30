@@ -146,27 +146,28 @@
       <br>
       <label for="classicModern">Classic</label>
       <label for="classicModern" style="float: right">Modern</label>
-      <input id="classicModern" type="range" min="0" max="50" value="25" step="5" name="classicModern"/>
+      <input id="classicModern" type="range" min="0" max="100" value="50" step="5" name="classicModern"/>
 
 
       <label for="matureYouthful">Mature</label>
       <label for="matureYouthful" style="float: right">Youthful</label>
-      <input id="matureYouthful" type="range" min="0" max="50" value="25" step="5" name="matureYouthful" />
+      <input id="matureYouthful" type="range" min="0" max="100" value="50" step="5" name="matureYouthful" />
 
       <label for="feminineMasculine">Feminine</label>
       <label for="feminineMasculine" style="float: right">Masculine</label>
-      <input id="feminineMasculine" type="range" min="0" max="50" value="25" step="5" name="feminineMasculine"/>
+      <input id="feminineMasculine" type="range" min="0" max="100" value="50" step="5" name="feminineMasculine"/>
 
       <label for="playfulSophisticated">Playful</label>
       <label for="playfulSophisticated" style="float: right">Sophisticated</label>
-      <input id="playfulSophisticated" type="range" min="0" max="50" value="25" step="5" name="playfulSophisticated" />
+      <input id="playfulSophisticated" type="range" min="0" max="100" value="50" step="5" name="playfulSophisticated" />
 
       <label for="economicalLuxurious">Economical</label>
       <label for="economicalLuxurious" style="float: right">Luxurious</label>
-      <input id="economicalLuxurious" type="range" min="0" max="50" value="25" step="5" name="economicalLuxurious"/>
+      <input id="economicalLuxurious" type="range" min="0" max="100" value="50" step="5" name="economicalLuxurious"/>
 
       <label for="geometricOrganic">Geometric</label>
       <label for="geometricOrganic" style="float: right">Organic</label>
+      <input id="geometricOrganic" type="range" min="0" max="100" value="50" step="5" name="geometricOrganic"/>
 
       <div class="form-group">
         <br>
@@ -175,11 +176,19 @@
         <input type="hidden" name="sketchId" id="sketchId">
       </div>
 
-      <p>
+      <div class="form-group">
         <br>
         <h4>Any other information you'd like our designers to have?</h4>
         <textarea id="info" rows = "3" cols = "80" name="info"></textarea>
-      </p>
+      </div>
+      
+      <div class="form-group">
+        <br>
+        <h4>Finally, how many bits would you like to award the winner of the contest?</h4>
+        <input type="text" class="form-control" id="btcPrize" placeholder="5000" name="btcPrize">
+      </div>
+      <br>
+
 
         <button type="submit" class="btn btn-success">Submit</button>
     </form>

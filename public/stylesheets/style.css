@@ -33,6 +33,7 @@
   margin: .7em;
 }
 
+
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
@@ -48,20 +49,163 @@
   letter-spacing: -1px;
 }
 
-.bitcoin-div {
-  background-color: black;
-  color: #5b687d;
-  padding: 1em;
-}
-
 .bitcoin-tabber {
   width: 50%;
   margin: 0 auto;
   padding-bottom: 2em;
 }
 
-.bitcoin-div h2, 
-.bitcoin-div h3, 
-.bitcoin-div a {
+.bargraph {
+  list-style: none;
+  padding-top: 20px;
+  width:560px;
+}
+
+ul.bargraph li {
+  height: 35px;
   color: white;
+  text-align: left;
+  font-style: italic;
+  font-weight:bolder;
+  font-size: 14px;
+  line-height: 35px;
+  padding: 0px 20px;
+  margin-bottom: 5px;
+}
+
+ul.bargraph li.classicModern {
+background: #ED1C24;
+}
+
+ul.bargraph li.matureYouthful {
+background: #F99C1C;
+}
+
+ul.bargraph li.feminineMasculine {
+background: #F4D41E;
+}
+
+ul.bargraph li.playfulSophisticated {
+background: #97B546;
+}
+
+ul.bargraph li.economicalLuxurious {
+background: #42BDA5;
+}
+
+ul.bargraph li.geometricOrganic {
+background: #00AEEF;
+}
+
+ul.bargraph li.xaxis {
+background: url(../images/x-axis.jpg);
+}
+
+/*tabs*/
+#tabs_wrapper {
+    width: 422px;
+}
+#tabs_container {
+    border-bottom: 1px solid #ccc;
+}
+#tabs {
+    list-style: none;
+    padding: 5px 0 4px 0;
+    margin: 0 0 0 10px;
+    font: 0.75em arial;
+}
+#tabs li {
+    display: inline;
+}
+#tabs li a {
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    text-decoration: none;
+    background-color: #eeeeee;
+    border-bottom: none;
+    outline: none;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+}
+#tabs li a:hover {
+    background-color: #dddddd;
+    padding: 4px 6px;
+}
+#tabs li.active a {
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    padding: 4px 6px 5px 6px;
+    border-bottom: none;
+}
+#tabs li.active a:hover {
+    background-color: #eeeeee;
+    padding: 4px 6px 5px 6px;
+    border-bottom: none;
+}
+ 
+#tabs li a.icon_accept {
+    background-image: url(accept.png);
+    background-position: 5px;
+    background-repeat: no-repeat;
+    padding-left: 24px;
+}
+#tabs li a.icon_accept:hover {
+    padding-left: 24px;
+}
+ 
+#tabs_content_container {
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 10px;
+    width: 400px;
+}
+.tab_content {
+    display: none;
+}
+
+/*Footer*/
+footer {
+  color: #8c96a1;
+}
+
+.footer span {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.footer span:first-child {
+  margin-right: 4em;
+}
+
+.footer a {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* LIST #2 */
+
+#list2 ol {
+  font-style: italic;
+  font-family: Georgia, Times, serif;
+  font-size: 24px;
+  color: #bfe1f1;
+}
+
+#list2 ol li {
+}
+#list2 ol li p {
+  padding:8px;
+  font-style:normal;
+  font-family:Arial;
+  font-size:13px;
+  color:#eee;
+  border-left: 1px solid #999;
+}
+
+#list2 ol li p em {
+  display: block;
 }

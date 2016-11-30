@@ -4,7 +4,7 @@ var cloudinary = require('cloudinary');
 
 var Category = require('../models/category.js');
 var Subcategory = require('../models/subcategory.js');
-var Contest = require('../models/contest');
+var Contest = require('../models/contest.js');
 
 
 // Ensure authenticated; if not, redirect to login
@@ -38,6 +38,7 @@ router.get('/categories', function(req, res, next) {
 
 router.get('/categories/:category', function(req, res) {
   Category.findOne({link: req.params.category}).exec(function(err, cat) {
+    console.log(cat);
     console.log(cat.link);
     Contest.find({category: cat.link}).exec(function(err, contest) {
       res.render('category', {'category': cat, 'contest': contest});
@@ -54,9 +55,9 @@ router.get('/categories/:category/:subcategory', function(req, res) {
 });
 
 router.get('/contests/:category/:id', function(req, res) {
-  var id = 'ObjectId(' + '"' + req.params.id + '"' + ')';
-  Contest.exec(function(err, contest) {
-    res.render('contest', {contest: contest, id: id});
+  Contest.findOne({_id: req.params.id}).exec(function(err, contest) {
+    console.log(contest);
+    res.render('contest', {contest: contest});
   })
 });
 
@@ -78,6 +79,7 @@ router.post('/request-design', function(req, res) {
   var geometricOrganic = req.body.geometricOrganic;
   var sketchId = req.body.sketchId;
   var info = req.body.info;
+  var btcPrize = req.body.btcPrize;
 
   // Validation
   req.checkBody('category', 'Category is required').notEmpty();
@@ -113,6 +115,7 @@ router.post('/request-design', function(req, res) {
       economicalLuxurious: economicalLuxurious,
       geometricOrganic: geometricOrganic,
       sketchId: sketchId,
+      btcPrize: btcPrize,
       info: info
     });
 
