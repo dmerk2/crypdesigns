@@ -35,8 +35,16 @@
 
 
 .navbar {
-  margin-bottom: 0;
   border-radius: 0;
+}
+
+.navbar-dark {
+  background-color: #14213D;
+  margin-bottom: 0 !important;
+}
+
+.navbar-dark a {
+  color: #FCA311;
 }
 
 .hide {
@@ -186,18 +194,16 @@ footer {
   display: inline-block;
 }
 
-/* LIST #2 */
+/* Pretty List */
 
-#list2 ol {
+.pretty-list ol {
   font-style: italic;
   font-family: Georgia, Times, serif;
   font-size: 24px;
   color: #bfe1f1;
 }
 
-#list2 ol li {
-}
-#list2 ol li p {
+.pretty-list ol li p {
   padding:8px;
   font-style:normal;
   font-family:Arial;
@@ -206,6 +212,34 @@ footer {
   border-left: 1px solid #999;
 }
 
-#list2 ol li p em {
+.pretty-list ol li p em {
   display: block;
+}
+
+/*List 2*/
+#list2 {
+  color: black;
+}
+#list2 ol li p {
+  color: #fff;
+}
+
+/*bitcoin div*/
+.why-crypdesigns-div {
+  background: black;
+}
+
+.home-page-box {
+  margin-top: 4em;
+  background-color: black;
+}
+
+.home-page-box h2 {
+  padding-top: 2em;
+  color: white;
+}
+
+/*How it works div*/
+.how-it-works-div {
+  background: black;
 }
