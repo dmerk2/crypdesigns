@@ -7,69 +7,71 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 </head>
 <body>
-  <nav class="navbar navbar-dark">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/" style: "margin-left: 30px">Crypdesigns</a>
-      </div>
+  <div id="wrapper">
+    <nav class="navbar navbar-dark">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" style: "margin-left: 30px">Crypdesigns</a>
+        </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/categories/web-app-design">Web and App Design</a></li>
-              <li><a href="/categories/clothing-merch">Clothing and Merchandise</a></li>
-              <li><a href="/categories/art-illustration">Art and Illustration</a></li>
-              <li><a href="/categories/logos-identity">Logos and Identity</a></li>
-              <li><a href="/categories/business-advertising">Business and Advertising</a></li>
-              <li><a href="/categories/book-magazine">Book and Magazine</a></li>
-              <li><a href="/categories/packaging-label">Packaging and Label</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="/categories">All</a></li>
-              <li><a href="/categories/other">Other</a></li>
-            </ul>
-          </li>
-          <li><a href="/how-it-works">How It Works <span class="sr-only">(current)</span></a></li>
-          <li><a href="/FAQ">FAQ</a></li>
-        </ul>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/categories/web-app-design">Web and App Design</a></li>
+                <li><a href="/categories/clothing-merch">Clothing and Merchandise</a></li>
+                <li><a href="/categories/art-illustration">Art and Illustration</a></li>
+                <li><a href="/categories/logos-identity">Logos and Identity</a></li>
+                <li><a href="/categories/business-advertising">Business and Advertising</a></li>
+                <li><a href="/categories/book-magazine">Book and Magazine</a></li>
+                <li><a href="/categories/packaging-label">Packaging and Label</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/categories">All</a></li>
+                <li><a href="/categories/other">Other</a></li>
+              </ul>
+            </li>
+            <li><a href="/how-it-works">How It Works <span class="sr-only">(current)</span></a></li>
+            <li><a href="/FAQ">FAQ</a></li>
+          </ul>
 
-        <ul class="nav navbar-nav navbar-right">
-          {{#if user}}
-          <li><a href="/users/logout">Log Out</a></li>
-          {{else}}
-          <li><a href="/users/register">Register</a></li>
-          <li><a href="/users/login">Log In</a></li>
-          {{/if}}
-        </ul>
-      </div><!-- /.navbar-collapse -->
+          <ul class="nav navbar-nav navbar-right">
+            {{#if user}}
+            <li><a href="/users/logout">Log Out</a></li>
+            {{else}}
+            <li><a href="/users/register">Register</a></li>
+            <li><a href="/users/login">Log In</a></li>
+            {{/if}}
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div> <!-- /container -->
+    </nav>
+
+    {{#if success_msg}}
+      <div class="alert alert-success">{{success_msg}}</div>
+    {{/if}}
+
+    {{#if error_msg}}
+      <div class="alert alert-danger">{{error_msg}}</div>
+    {{/if}}
+
+    {{#if error}}
+      <div class="alert alert-danger">{{error}}</div>
+    {{/if}}
+
+    {{!-- Body --}}
+    <div id="body">
+    {{{body}}}
     </div>
-  </nav><!-- /.container-fluid -->
 
-  {{#if success_msg}}
-    <div class="alert alert-success">{{success_msg}}</div>
-  {{/if}}
-
-  {{#if error_msg}}
-    <div class="alert alert-danger">{{error_msg}}</div>
-  {{/if}}
-
-  {{#if error}}
-    <div class="alert alert-danger">{{error}}</div>
-  {{/if}}
-
-  {{!-- Body --}}
-  {{{body}}}
-
-  <div class="row" style="background: black">
     <footer class="text-center footer">
       <span>help@crypdesigns.com</span>
       <span>555-555-5555</span>

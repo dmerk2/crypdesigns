@@ -1,23 +1,33 @@
-<h1 class="text-center">Categories</h1>
-
-<h3 class="text-center">Browse Categories</h3>
+<h1 class="text-center">Browse Categories</h1>
 
 <div class="row">
-  <div class="col-md-6" id="categoriesDiv">
-    <ul id="categoryList" style="list-style: none">
-      <li><a href="/categories/web-app-design" id="web_app">Web and App Design</a></li>
-      <li><a href="/categories/clothing-merch" id="clothing_merch">Clothing and Merchandise</a></li>
-      <li><a href="/categories/art-illustration" id="art_illustration">Art and Illustration</a></li>
-      <li><a href="categories/logos-identity" id="logos_identity">Logos and Identity</a></li>
-      <li><a href="categories/business-advertising" id="business_advertising">Business and Advertising</a></li>
-      <li><a href="categories/book-magazine" id="book_magazine">Book and Magazine</a></li>
-      <li><a href="categories/packaging-label" id="packaging_label">Packaging and Label</a></li>
-      <li><a href="categories/other" id="other">Other</a></li>
+  <div class="col-md-6 col-md-offset-1" id="categoriesDiv">
+    <div style="background-color: black">
+      <h3 style="margin-left: 2.4em; padding: .5em 0 .5em; color: white">Categories</h3>
+    </div>
+    <ul id="categoryList" style="list-style: none; background: #eaeaea">
+      {{!-- https://www.shutterstock.com/g/graphiqastock --}}
+      <li><img src="/images/web_app_icon.png" alt="icon"><a href="/categories/web-app-design" id="web_app">Web and App Design</a></li>
+      {{!-- https://www.vecteezy.com/ --}}
+      <li><img src="/images/clothing_icon.png" alt="icon"><a href="/categories/clothing-merch" id="clothing_merch">Clothing and Merchandise</a></li>
+      {{!-- http://rev-icon.com/ --}}
+      <li><img src="/images/art_icon.png" alt="icon"><a href="/categories/art-illustration" id="art_illustration">Art and Illustration</a></li>
+      {{!-- https://www.iconfinder.com/curlyboy --}}
+      <li><img src="/images/logo_icon.png" alt="icon"><a href="categories/logos-identity" id="logos_identity">Logos and Identity</a></li>
+      {{!-- https://www.iconfinder.com/Naf_Naf --}}
+      <li><img src="/images/business_icon.png" alt="icon"><a href="categories/business-advertising" id="business_advertising">Business and Advertising</a></li>
+      {{!-- http://pcunleashed.com/ --}}
+      <li><img src="/images/book_icon.png" alt="icon"><a href="categories/book-magazine" id="book_magazine">Book and Magazine</a></li>
+      {{!-- http://sa-ki.deviantart.com/ --}}
+      <li><img src="/images/packaging_icon.png" alt="icon"><a href="categories/packaging-label" id="packaging_label">Packaging and Label</a></li>
+      <li><img src="/images/other_icon.png" alt="icon"><a href="categories/other" id="other">Other</a></li>
     </ul>
   </div>
 
   <div class="col-md-4" id="subsDiv">
-    <ul id="subsList" style="list-style: none">
-    </ul>
+    <div style="background-color: black">
+      <h3 style="margin-left: 2.3em; padding: .5em 0 .5em; color: white">Subcategories</h3>
+    </div>
+    <ul id="subsList" style="list-style: none; background: #eaeaea"></ul>
   </div>
 </div>

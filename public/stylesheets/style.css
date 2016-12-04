@@ -1,3 +1,29 @@
+/*Sticky Footer*/
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#wrapper {
+   min-height:100%;
+   position:relative;
+}
+
+#body {
+   padding-bottom:130px; /* Height of the footer */
+}
+
+footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:130px; /* Height of the footer */
+}
+
+
+
+
 .jumbotron {
   height: 30em;
 }
@@ -15,24 +41,47 @@
   padding-left: 10%;
 }
 
+/*Categories*/
+
+#categoryList {
+  padding-left: 0;
+}
+
 #categoryList li {
   font-size: 2em;
   margin: .7em;
 }
 
 #categoryList li a:hover {
-  color: orange;
+  color: #FCA311;
+}
+
+/*Subcategories*/
+#subsList li {
+  font-size: 1.5em;
+  margin: 1em;
+  padding-top: 1em;
+}
+
+#subsList li:last-child {
+  padding-bottom: 2em;
+}
+
+#subsList li a {
+  color: black;
 }
 
 #subsList li a:hover {
-  color: orange;
+  color: #FCA311;
 }
 
-#subsList li {
-  font-size: 1.5em;
-  margin: .7em;
+#categoryList li a {
+  color: black;
 }
 
+#categoryList li img {
+  margin: 1em 1em 1em;
+}
 
 .navbar {
   border-radius: 0;
@@ -175,10 +224,12 @@ background: url(../images/x-axis.jpg);
 
 /*Footer*/
 footer {
-  color: #8c96a1;
+  color: #fff;
+  background-color: black;
 }
 
 .footer span {
+  margin-top: 20px;
   margin-bottom: 20px;
   display: inline-block;
 }
@@ -192,6 +243,7 @@ footer {
   margin-right: 2em;
   margin-bottom: 20px;
   display: inline-block;
+  color: #FCA311
 }
 
 /* Pretty List */
@@ -214,6 +266,7 @@ footer {
 
 .pretty-list ol li p em {
   display: block;
+  font-size: 3em;
 }
 
 /*List 2*/
@@ -230,12 +283,13 @@ footer {
 }
 
 .home-page-box {
-  margin-top: 4em;
+  margin-top: 3em;
   background-color: black;
 }
 
 .home-page-box h2 {
   padding-top: 2em;
+  padding-left: 2em;
   color: white;
 }
 
