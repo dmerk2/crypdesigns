@@ -1,63 +1,123 @@
 <div class="page-header">
   <div class="container">
-    <div class="row text-center jumbotron" style="height: 44%">
-      <h3>{{contest.contest}}<h3>
-      <h5>By {{contest.creator}}</h5>
-      <h3>{{contest.btcPrize}} bits</h3>
-      <br>
-      <button class="btn btn-success">Submit design</button>
+    {{!-- Jumbotron --}}
+    <div class="row jumbotron" style="height: 44%">
+      <div class="col-md-2 col-md-offset-4">
+        <div class="mainImageDiv">
+          <p style="margin: 5px"><small>Click to upload image</small></p>
+          <img class="imageDefault" src="/images/no_image_dots.png" style="display: block; margin: 0 auto">
+        </div>
+      </div>
+      <div class="col-md-3  ">
+        <h3>{{contest.contest}}<h3>
+        <h5>By {{contest.creator}}</h5>
+        <h3>{{contest.btcPrize}} bits</h3>
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submitModal">Submit design</button>
+      </div>
     </div>
     <hr/>
-    
-        <div class="text-center">
-          <h3>Background Info</h3>
-          <h4>Category</h4>
-          <p>{{contest.category}}</p>
-          <h4>Company Name</h4>
-          <p>{{contest.company}}</p>
-          <h4>Description</h4>
-          <p>{{contest.description}}</p>
-          <h4>Category</h4>
-          <p>{{contest.category}}</p>
-          <h4>Slogan</h4>
-          <p>{{contest.slogan}}</p>
-          <h4>Target Audience</h4>
-          <p>{{contest.audience}}</p>
-          <h4>Colors</h4>
-          <p>{{contest.colors}}</p>
-          <h4>Additional Info</h4>
-          <p>{{contest.info}}</p>
-          <hr/>
-          <br>
 
-          <h3>Style Attributes</h3>
+    <!-- Modal -->
+    <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Submit Design</h4>
+          </div>
+          <div class="modal-body">
+            <h2>Want to submit a design?</h2>
+            <h3>Go ahead!</h3>
+            <ul>
+              <li>PNG, GIF or JPG (RGB)</li>
+              <li>Maximum file size of 8mb</li>
+              <li>Minimum dimensions of 960px by 960px</li>
+              <li>Maximum dimensions of 2040px by 8160px</li>
+            </ul>
+            <form method="post" action="/contests" id="design-upload-form">
+              <input id="upload-img" type="file" name="file">
+
+              <input type="hidden" name="designId" id="designId">
+              <input type="hidden" name="designImage" id="designImage">
+
+              <div id="designPreview"></div>
+              <br>
+              <label for="designDescription">Description (optional)</label>
+              <textarea id="designDescription" rows = "3" cols = "40" name="designDescription"></textarea>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      {{!-- Background Info --}}
+      <div class="col-md-6 text-center">
+        <h3>Background Info</h3>
+        <h4>Category</h4>
+        <p>{{contest.category}}</p>
+        <h4>Company Name</h4>
+        <p>{{contest.company}}</p>
+        <h4>Description</h4>
+        <p>{{contest.description}}</p>
+        <h4>Category</h4>
+        <p>{{contest.category}}</p>
+        <h4>Slogan</h4>
+        <p>{{contest.slogan}}</p>
+        <h4>Target Audience</h4>
+        <p>{{contest.audience}}</p>
+        <h4>Colors</h4>
+        <p>{{contest.colors}}</p>
+        <h4>Additional Info</h4>
+        <p>{{contest.info}}</p>
+        <hr/>
+      </div>
+      {{!-- Sketches --}}
+      <div class="col-md-4">
+        {{!-- Style --}}
+        <h3 class="text-center">Style Attributes</h3>
         <ul class="bargraph" style="margin: 0 auto">
-          <label for="classicModern">Classic</label>
-          <label for="classicModern" style="float: right">Modern</label>
+          <label for="classicModern" style="float: left">Classic</label>
+          <label for="classicModern" style="position: relative; left: 80%">Modern</label>
           <li class="classicModern reddeep" style="width: {{contest.classicModern}}%"></li>
 
-          <label for="matureYouthful">Mature</label>
-          <label for="matureYouthful" style="float: right">Youthful</label>
+          <label for="matureYouthful" style="float: left">Mature</label>
+          <label for="matureYouthful" style="position: relative; left:80%">Youthful</label>
           <li class="matureYouthful" style="width: {{contest.matureYouthful}}%"></li>
 
-          <label for="feminineMasculine">Feminine</label>
-          <label for="feminineMasculine" style="float: right">Masculine</label>
+          <label for="feminineMasculine" style="float: left">Feminine</label>
+          <label for="feminineMasculine" style="position: relative; left: 75%">Masculine</label>
           <li class="feminineMasculine" style="width: {{contest.feminineMasculine}}%"></li>
 
-          <label for="playfulSophisticated">Playful</label>
-          <label for="playfulSophisticated" style="float: right">Sophisticated</label>
+          <label for="playfulSophisticated" style="float: left">Playful</label>
+          <label for="playfulSophisticated" style="position: relative; left: 74%">Sophisticated</label>
           <li class="playfulSophisticated" style="width: {{contest.playfulSophisticated}}%"></li>
 
-          <label for="economicalLuxurious">Economical</label>
-          <label for="economicalLuxurious" style="float: right">Luxurious</label>
+          <label for="economicalLuxurious" style="float: left">Economical</label>
+          <label for="economicalLuxurious" style="position: relative; left: 73%">Luxurious</label>
           <li class="economicalLuxurious" style="width: {{contest.economicalLuxurious}}%"></li>
 
-          <label for="geometricOrganic">Geometric</label>
-          <label for="geometricOrganic" style="float: right">Organic</label>
+          <label for="geometricOrganic" style="float: left">Geometric</label>
+          <label for="geometricOrganic" style="position: relative; left: 76%">Organic</label>
           <li class="geometricOrganic" style="width: {{contest.geometricOrganic}}%"></li>
         </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Sketches & Similar Designs</h3>
+        <div id="contestSketch" data-sketchId="{{contest.sketchId}}"></div>
+      </div>
+    </div>
   </div>
-    
 </div>
 
 

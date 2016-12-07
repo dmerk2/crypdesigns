@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 
 var DesignSchema = new Schema({
-  image: String,
+  imageId: String,
   description: String
 });
 

@@ -5,6 +5,7 @@ var cloudinary = require('cloudinary');
 var Category = require('../models/category.js');
 var Subcategory = require('../models/subcategory.js');
 var Contest = require('../models/contest.js');
+var Design = require('../models/design.js');
 
 
 // Ensure authenticated; if not, redirect to login
@@ -61,6 +62,23 @@ router.get('/contests/:category/:id', function(req, res) {
   })
 });
 
+// router.post('/contests/:category/:id', function(req, res) {
+//   var imageId = req.body.imageId;
+//   var designDescription = req.body.designDescription;
+
+//   console.log(imageId);
+
+//   var newDesign = new Design({
+//     imageId: imageId,
+//     description: designDescription
+//   });
+
+//   newDesign.save(function(err, design) {
+//     if (err) throw err;
+//     console.log(design);
+//   })
+// });
+
 router.post('/request-design', function(req, res) {
   var creator = req.user.username;
   var category = req.body.category;
@@ -77,6 +95,7 @@ router.post('/request-design', function(req, res) {
   var playfulSophisticated = req.body.playfulSophisticated;
   var economicalLuxurious = req.body.economicalLuxurious;
   var geometricOrganic = req.body.geometricOrganic;
+  var sketchImage = req.body.sketchImage;
   var sketchId = req.body.sketchId;
   var info = req.body.info;
   var btcPrize = req.body.btcPrize;
@@ -115,6 +134,7 @@ router.post('/request-design', function(req, res) {
       economicalLuxurious: economicalLuxurious,
       geometricOrganic: geometricOrganic,
       sketchId: sketchId,
+      sketchImage: sketchImage,
       btcPrize: btcPrize,
       info: info
     });

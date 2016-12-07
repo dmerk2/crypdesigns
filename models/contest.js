@@ -21,6 +21,7 @@ var ContestSchema = new Schema({
   geometricOrganic: String,
   info: String,
   sketchId: String,
+  sketchImage: String,
   btcPrize: String,
   designs: [{type: mongoose.Schema.Types.ObjectId, ref: 'Design'}]
 });

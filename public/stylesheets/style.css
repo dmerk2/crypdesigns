@@ -23,7 +23,7 @@ footer {
 
 
 
-
+/*Jumbotron*/
 .jumbotron {
   height: 30em;
 }
@@ -39,6 +39,16 @@ footer {
   float: right;
   width: 50%;
   padding-left: 10%;
+}
+
+.mainImageDiv {
+  border: 1px black solid;
+  height: 100%;
+}
+
+.mainImageDiv .imageDefault {
+  position: relative;
+  top: 30%;
 }
 
 /*Categories*/
@@ -112,10 +122,16 @@ footer {
   padding-bottom: 2em;
 }
 
+/*Bar graph */
 .bargraph {
   list-style: none;
   padding-top: 20px;
   width:560px;
+}
+
+ul.bargraph span {
+  position: absolute;
+  left: 200px;
 }
 
 ul.bargraph li {
