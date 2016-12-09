@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var cloudinary = require('cloudinary');
+var http = require('http').Server()
 
 var Category = require('../models/category.js');
 var Subcategory = require('../models/subcategory.js');
 var Contest = require('../models/contest.js');
 var Design = require('../models/design.js');
-
 
 // Ensure authenticated; if not, redirect to login
 function ensureAuthenticated(req, res, next) {
@@ -28,10 +28,12 @@ router.get('/how-it-works', function(req, res, next) {
   res.render('how-it-works');
 });
 
-// GET request design page
+// Request design
 router.get('/request-design', ensureAuthenticated, function(req, res, next) {
   res.render('request-design');
 });
+
+// Categories
 
 router.get('/categories', function(req, res, next) {
   res.render('categories');
@@ -55,9 +57,9 @@ router.get('/categories/:category/:subcategory', function(req, res) {
   })
 });
 
+// Contests
 router.get('/contests/:category/:id', function(req, res) {
   Contest.findOne({_id: req.params.id}).exec(function(err, contest) {
-    console.log(contest);
     res.render('contest', {contest: contest});
   })
 });

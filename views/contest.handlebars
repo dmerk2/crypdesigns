@@ -116,6 +116,21 @@
         <h3>Sketches & Similar Designs</h3>
         <div id="contestSketch" data-sketchId="{{contest.sketchId}}"></div>
       </div>
+      <div class="col-md-6 col-md-offset-2">
+        <h3>Discussion</h3>
+        {{!-- Chat Box --}}
+        <div class="panel panel-primary" id="chatDiv">
+          <div class="panel-heading"><small>{{user.name}}online</small></div>
+          <div class="panel-body" id="chatBody" style="height: 300px"></div>
+          <!-- Chats go here -->
+        </div>
+        
+        <form class="form-inline" id="chatForm" onSubmit="return false" style="float: right">
+          <p class="form-control-static blue" for="chatInput">Say something:</p>
+          <input class="form-control" id="chatInput">
+          <button type="button" class="btn btn-default" id="chatSubmit">Send!</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
